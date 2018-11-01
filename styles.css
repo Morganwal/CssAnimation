@@ -1,0 +1,149 @@
+/* body{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+} */
+
+.wrapper{
+    max-width: 150px;
+    position: relative;
+    background-color: rgb(85, 85, 85);
+    cursor: pointer;
+}
+
+.wrapper:hover .cls-1{
+    animation: Ring1AnimationIn 0.35s forwards;
+}
+
+.wrapper:hover .cls-2{
+    animation: Ring2AnimationIn 0.35s forwards;
+}
+
+.wrapper:hover .cls-3{
+    animation: Ring3AnimationIn 0.35s forwards;
+}
+
+.cls-1{
+    position: absolute;
+    transform: translate(0px, 0px);
+    animation: Ring1AnimationOut 0.35s forwards;
+    fill:#fff;
+    fill-opacity:0;
+    stroke:#fc3;
+    stroke-miterlimit:10;
+    stroke-width:10px
+}
+
+.cls-2{
+    position: absolute;
+    transform: translate(0px, 0px);
+    animation: Ring2AnimationOut 0.35s forwards;
+    fill:#fff;
+    fill-opacity:0;
+    stroke: #fc3;
+    stroke-miterlimit:10;
+    stroke-width:10px
+}
+
+.cls-3{
+    position: absolute;
+    transform: translate( 0px, 0px );
+    animation: Ring3AnimationOut 0.35s forwards;
+    fill:#fff;
+    fill-opacity:0;
+    stroke:#fc3;
+    stroke-miterlimit:10;
+    stroke-width:10px
+}
+
+@keyframes Ring1AnimationIn{
+    0%{
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    40%{
+        transform: translateY(100px);
+        animation-timing-function: linear;
+    }
+    100%{
+        transform: translateY(-77px);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes Ring1AnimationOut {
+    0%{
+        transform: translateY(-79);
+        -webkit-animation-timing-function: ease-out;
+    }
+    70%{
+        transform: translateY(100px);
+        -webkit-animation-timing-function: linear;
+    }
+    100%{
+        transform: translate(0px,0px);
+        -webkit-animation-timing-function: ease-in;
+    }
+}
+
+@keyframes Ring2AnimationIn {
+    0% {
+      transform: translate(0px, 0px);
+      animation-timing-function: ease-in;
+    }
+    70% {
+      transform: translate(40px,-40px);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: translate(-106px, 103px);
+      animation-timing-function: ease-out;
+    }
+  }
+
+  @keyframes Ring2AnimationOut {
+      0%{
+          transform: translate(-104px, 104px);
+          -webkit-animation-timing-function: ease-out;
+      }
+      70%{
+          transform: translate(40px, -40px);
+          -webkit-animation-timing-function: linear;
+      }
+      100%{
+          transform: translate(0px,0px);
+          -webkit-animation-timing-function: ease-in;
+      }
+  }
+
+  @keyframes Ring3AnimationIn {
+    0% {
+      transform: translate(0px, 0px);
+      animation-timing-function: ease-in;
+    }
+    70% {
+      transform: translate(-40px, -40px);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: translate(104px, 104px);
+      animation-timing-function: ease-out;
+    }
+  }
+
+  @keyframes Ring3AnimationOut {
+      0%{
+          transform: translate(104px, 104px);
+          -webkit-animation-timing-function: ease-out;
+      }
+      70%{
+          transform: translate(-40px,-40px);
+          -webkit-animation-timing-function: linear;
+      }
+      100%{
+          transform: translate(0px,0px);
+          -webkit-animation-timing-function: ease-in;
+      }
+  }
+
